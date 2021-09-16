@@ -1,0 +1,57 @@
+$primary-color:rgba(0, 75, 255, 1);
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/IRANSansWeb(FaNum).eot'); /* IE9 Compat Modes */
+  src: url('/fonts/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/IRANSansWeb(FaNum).woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/IRANSansWeb(FaNum).woff') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/IRANSansWeb(FaNum).ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'IRANSans-bold';
+  src: url('/fonts/IRANSansWeb(FaNum)_Bold.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/fonts/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/fonts/IRANSansWeb(FaNum)_Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('/fonts/IRANSansWeb(FaNum)_Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+p,span,div {
+  font-family: IRANSans;
+}
+h1,h2,h4,h5,h6,h3{
+  font-family: IRANSans-bold;
+}
+
+.primary-btn{
+  background-color: $primary-color;
+  border: none;
+  padding:15px 30px;
+  border-radius: 10px;
+  font-size: 14px;
+  color:white;
+  svg{
+    fill: white;
+  }
+  &:hover{
+    span{
+      color: $primary-color !important;
+    }
+    background-color: rgba(0, 75, 255, 0.09) ;
+    color: $primary-color;
+    font-weight: bold;
+    svg{
+      fill: $primary-color;
+    }
+  }
+}
+
+.menu-item{
+  img{
+    pointer-events: none;
+  }
+  p{
+    pointer-events: none;
+  }
+}

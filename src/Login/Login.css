@@ -1,0 +1,54 @@
+.login {
+  background-color: #f5f9ff;
+  height: 100vh;
+  margin: 0;
+}
+.login input {
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: right;
+  outline: transparent;
+}
+.login p {
+  color: #777;
+  font-size: 14px;
+}
+.login .home-page {
+  color: #004BFF;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.login-left {
+  background-color: #114fe3;
+  position: relative;
+  border-radius: 20px 0 0 20px;
+}
+
+.login-left > img {
+  position: absolute;
+  top: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 50%;
+  opacity: 0.1;
+}
+
+.login-left > div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=Login.css.map */

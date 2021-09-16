@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/IRANSansWeb(FaNum).eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/IRANSansWeb(FaNum).eot?#iefix") format("embedded-opentype"), url("/fonts/IRANSansWeb(FaNum).woff2") format("woff2"), url("/fonts/IRANSansWeb(FaNum).woff") format("woff"), url("/fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: "IRANSans-bold";
+  src: url("/fonts/IRANSansWeb(FaNum)_Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/IRANSansWeb(FaNum)_Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/IRANSansWeb(FaNum)_Bold.woff2") format("woff2"), url("/fonts/IRANSansWeb(FaNum)_Bold.woff") format("woff"), url("/fonts/IRANSansWeb(FaNum)_Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+p, span, div {
+  font-family: IRANSans;
+}
+
+h1, h2, h4, h5, h6, h3 {
+  font-family: IRANSans-bold;
+}
+
+.primary-btn {
+  background-color: #004bff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: white;
+}
+.primary-btn svg {
+  fill: white;
+}
+.primary-btn:hover {
+  background-color: rgba(0, 75, 255, 0.09);
+  color: #004bff;
+  font-weight: bold;
+}
+.primary-btn:hover span {
+  color: #004bff !important;
+}
+.primary-btn:hover svg {
+  fill: #004bff;
+}
+
+.menu-item img {
+  pointer-events: none;
+}
+.menu-item p {
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=index.css.map */
