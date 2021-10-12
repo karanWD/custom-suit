@@ -92,27 +92,30 @@ export const fetchMaterial = (type,menu, shot, value,icon) => (dispatch, getStat
         }
     }
 
-    axios({
-        method: 'post',
-        url: `${BasicUrl}/user/fetch/render/m/1/${shot}/`,
-        headers: {},
-        data: {
-            renderItem: selectedItems
-        }
-    })
-        .then(
-            async res => {
-                await combine(0, 0, res.data[0], res.data[1], res.data[2],getState().home.innerListToggle)
-                await dispatch({
-                    type: HomeActionType.FETCH_MATERIAL,
-                    payload: res.data
-                })
-                await dispatch({
-                    type: HomeActionType.MATERIAL_SELECTED,
-                    payload:selectedItems
-                })
+    if (selectedItems.length>0){
+
+        axios({
+            method: 'post',
+            url: `${BasicUrl}/user/fetch/render/m/1/${shot}/`,
+            headers: {},
+            data: {
+                renderItem: selectedItems
             }
-        )
+        })
+            .then(
+                async res => {
+                    await combine(0, 0, res.data[0], res.data[1], res.data[2],getState().home.innerListToggle)
+                    await dispatch({
+                        type: HomeActionType.FETCH_MATERIAL,
+                        payload: res.data
+                    })
+                    await dispatch({
+                        type: HomeActionType.MATERIAL_SELECTED,
+                        payload:selectedItems
+                    })
+                }
+            )
+    }
 }
 
 export const changeShot = (data,shot) => (dispatch,getState) => {

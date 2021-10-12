@@ -19,35 +19,37 @@ const ImagePreview = () => {
     }, [innerListToggle])
 
     if (window.screen.width >= 992) {
-        var percent = 60
+        var percent = 70
         return (
             <div className="col-lg-12 px-0 imagePreview d-flex justify-content-center">
                 {
-                    innerListToggle === "lining"
-                        ?
-                        <canvas id="myCanvas" width={ window.screen.width - ( percent / 2 * window.screen.width / 100 )}
-                                height={window.screen.width - (percent / 2 * window.screen.width / 100)}></canvas>
-                        :
-                        <canvas id="myCanvas" width={window.screen.width - (percent * window.screen.width / 100)}
-                                height={(window.screen.width - (percent * window.screen.width / 100)) * 1.25}></canvas>
-
+                    // innerListToggle === "lining"
+                    //     ?
+                    //     <canvas id="myCanvas" width={ window.screen.width - ( percent / 2 * window.screen.width / 100 )}
+                    //             height={window.screen.width - (percent / 2 * window.screen.width / 100)}></canvas>
+                    //     :
+                       <canvas id="myCanvas"
+                               width = { window.screen.width - ( percent * window.screen.width / 100 )}
+                               height= { (window.screen.width - (percent * window.screen.width / 100))*1.33}>
+                       </canvas>
                 }
-
             </div>
         )
     } else {
         var percent = 0
         return (
-            <div className="col-lg-12 px-0 imagePreview d-flex justify-content-center">
+            <div className="col-lg-12 px-0 imagePreview d-lg-flex justify-content-lg-center">
                 {
-                    innerListToggle === "lining"
-                        ?
-                        <canvas id="myCanvas" width={2*window.screen.width - (percent * window.screen.width / 100)}
-                                height={2*window.screen.width - (percent * window.screen.width / 100)}></canvas>
-                        :
-                        <canvas id="myCanvas" width={2*window.screen.width - (percent * window.screen.width / 100)}
-                                height={2*(window.screen.width - (percent * window.screen.width / 100)) * 1.25}></canvas>
-
+                    // innerListToggle === "lining"
+                    //     ?
+                    //     <canvas id="myCanvas" width={2*window.screen.width - (percent * window.screen.width / 100)}
+                    //             height={2*window.screen.width - (percent * window.screen.width / 100)}></canvas>
+                    //     :
+                        <canvas
+                            id="myCanvas"
+                            width = {window.screen.width}
+                            height ={(window.screen.width * 1.33)}>
+                        </canvas>
                 }
 
             </div>

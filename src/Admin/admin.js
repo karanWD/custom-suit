@@ -15,7 +15,7 @@ const Admin = () => {
                 <Aside/>
                 <Switch>
                     <Route exact path="/admin/list" component={List} />
-                    <Route exact path="/admin/insert/" component={Insert} />
+                    <Route exact path="/admin/insert/:id" component={Insert} />
                     <Route  path="" component={Insert} />
                 </Switch>
             </section>

@@ -5,7 +5,7 @@ export function combine(i,j,suit,lining,button,type) {
     var buttons =button;
     var sindex = 0;
     var lindex = 0;
-    var percent = window.screen.width > 992 ? 60 : 0
+    var percent = window.screen.width > 992 ? 70 : 0
 
     if (i != -1) {
         sindex = i;
@@ -33,14 +33,21 @@ export function combine(i,j,suit,lining,button,type) {
             imageObj3.src = buttons;
             imageObj3.crossOrigin="anonymous"
             imageObj3.onload = function () {
-                if(type === "lining"){
-                    ctx.drawImage(imageObj1, 0, 0, window.screen.width - (percent/2*window.screen.width/100), window.screen.width - (percent/2*window.screen.width/100));
-                    ctx.drawImage(imageObj2, 0, 0, window.screen.width - (percent/2*window.screen.width/100), window.screen.width - (percent/2*window.screen.width/100));
-                    ctx.drawImage(imageObj3, 0, 0, window.screen.width - (percent/2*window.screen.width/100), window.screen.width - (percent/2*window.screen.width/100));
-                } else{
-                    ctx.drawImage(imageObj1, 0, 0, window.screen.width - (percent*window.screen.width/100), (window.screen.width - (percent*window.screen.width/100))*1.25);
-                    ctx.drawImage(imageObj2, 0, 0, window.screen.width - (percent*window.screen.width/100) , (window.screen.width - (percent*window.screen.width/100))*1.25);
-                    ctx.drawImage(imageObj3, 0, 0, window.screen.width - (percent*window.screen.width/100) , (window.screen.width - (percent*window.screen.width/100)) *1.25);
+                if (window.screen.width >= 992) {
+                    // if(type === "lining"){
+                    //     ctx.drawImage(imageObj1, 0, 0, window.screen.width - (percent/2*window.screen.width/100), window.screen.width - (percent/2*window.screen.width/100));
+                    //     ctx.drawImage(imageObj2, 0, 0, window.screen.width - (percent/2*window.screen.width/100), window.screen.width - (percent/2*window.screen.width/100));
+                    //     ctx.drawImage(imageObj3, 0, 0, window.screen.width - (percent/2*window.screen.width/100), window.screen.width - (percent/2*window.screen.width/100));
+                    // } else{
+                    ctx.drawImage(imageObj1, 0, 0,  window.screen.width - ( percent * window.screen.width / 100 ) , ( window.screen.width - ( percent *  window.screen.width / 100)) * 1.33 );
+                    ctx.drawImage(imageObj2, 0, 0,  window.screen.width - ( percent * window.screen.width / 100 ) , ( window.screen.width - ( percent *  window.screen.width / 100)) * 1.33 );
+                    ctx.drawImage(imageObj3, 0, 0,  window.screen.width - ( percent * window.screen.width / 100 ) , ( window.screen.width - ( percent *  window.screen.width / 100)) * 1.33 );
+                    // }
+                }
+                else{
+                    ctx.drawImage(imageObj1, 0, 0, window.screen.width, window.screen.width * 1.33);
+                    ctx.drawImage(imageObj2, 0, 0, window.screen.width, window.screen.width * 1.33);
+                    ctx.drawImage(imageObj3, 0, 0, window.screen.width, window.screen.width * 1.33);
                 }
                 var img = c.toDataURL("image/png");
                 var imgTag = document.createElement("img")

@@ -1,6 +1,7 @@
 import React, {Suspense, lazy} from "react"
 import {BrowserRouter as Router} from "react-router-dom";
 import {Switch, Route} from "react-router"
+import {useHistory,useLocation,useRouteMatch,useQuery,useParams} from "react-router-dom"
 import logo from './logo.svg';
 
 
@@ -25,7 +26,9 @@ const Admin = lazy(() => {
 })
 
 function App() {
+
   return (
+
       <Suspense fallback={<Loading/>}>
         <div className="container-fluid px-0">
           <Router basename="/">

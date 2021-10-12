@@ -1,14 +1,12 @@
 import React from "react";
+import PriceContainer from "../priceContainer/PriceContainer";
 
 const BuyBtn = () => {
     return(
-        <div className="buy-btn">
-            <button className="d-flex flex-row-reverse">
-                <div className="price">
-                    <span className="d-block price-toman text-right">تومان</span>
-                    <h6 className="d-block text-right">
-                        15,000,000
-                    </h6>
+        <div className="col-3 px-0 col-lg-auto buy-btn">
+            <button className="d-lg-flex flex-row-reverse justify-content-around">
+                <div className="d-none d-lg-block">
+                    <PriceContainer/>
                 </div>
                 <div className="continue">
                     ادامه
