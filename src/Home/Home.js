@@ -6,6 +6,7 @@ import {fetchMenu} from "../redux/Home/Home-actions";
 import InnerList from "../Components/InnerList/InnerList";
 import BackViewBtn from "../Components/BackViewBtn/BackViewBtn";
 import "./home.css"
+import Header from "../Components/Header/Header";
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
 
     return (
         <div className="d-flex flex-row flex-wrap main">
+            <Header/>
             <ImagePreview/>
             <MaterialList/>
             {innerListToggle ? <InnerList/> : null}

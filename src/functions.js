@@ -1,3 +1,5 @@
+import {useSelector} from "react-redux";
+
 export function combine(i,j,suit,lining,button,type) {
     // console.log(suit,lining,button)
     var suits = suit;
@@ -60,4 +62,17 @@ export function combine(i,j,suit,lining,button,type) {
         }
     };
 }
+export const useToken = (length)=>{
+    const rand=()=>Math.random(0).toString(36).substr(2);
+    const token = (rand()+rand()+rand()+rand()).substr(0,length);
+    return token
+}
 
+export const useFinalPrice =  (data) => {
+     const items =  useSelector(state => state.home[data])
+     if(items){
+        let total =
+            items.reduce((total, item) => total + parseInt(item.price), 0)
+        return total
+     }
+}

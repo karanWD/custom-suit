@@ -1,10 +1,11 @@
 import React from "react";
 import PriceContainer from "../priceContainer/PriceContainer";
 
-const BuyBtn = () => {
+const BuyBtn = ({clickHandler}) => {
+
     return(
         <div className="col-3 px-0 col-lg-auto buy-btn">
-            <button className="d-lg-flex flex-row-reverse justify-content-around">
+            <button className="d-lg-flex flex-row-reverse justify-content-around" onClick={clickHandler}>
                 <div className="d-none d-lg-block">
                     <PriceContainer/>
                 </div>

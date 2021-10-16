@@ -11,6 +11,7 @@ body {
   width: 100%;
   background-color: transparent;
   z-index: 9;
+
   ul {
     li {
       width: calc(12% - 10px);
@@ -86,6 +87,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px 0 0 0;
 
   button {
     border: none;
@@ -161,7 +163,7 @@ body {
   ul {
     li {
       margin-bottom: 10px;
-      padding: 5px 15px;
+      padding: 5px 5px;
       background-color: #f3f3f3;
       border: 1px solid #eee;
       border-radius: 15px;
@@ -232,6 +234,7 @@ body {
     opacity: 0.5;
   }
 }
+
 .innerListItemsContainer {
   height: 80vh;
   overflow: auto;
@@ -256,7 +259,7 @@ body {
   .imagePreview:after, .imagePreview:before {
     display: none;
   }
-  .material-list{
+  .material-list {
     background-color: white;
   }
   .material-list ul li {
@@ -279,6 +282,7 @@ body {
     width: 100%;
     height: unset;
     background-color: white;
+
   }
   .buy-btn button {
     width: 95%;
@@ -315,9 +319,27 @@ body {
       font-size: 24px
     }
   }
-  .innerListItemsContainer {
-    height: 100vh;
+  //.innerListItemsContainer {
+  //  height:unset;
+  //  padding: 10px;
+  //  position: fixed;
+  //  bottom: 0;
+  //  left: 0;
+  //  width:100%;
+  //  z-index: 99;
+  //  overflow: auto;
+  //}
+  .innerListItemsContainer{
+    height: unset;
+    padding: 0;
+    bottom: 0;
+    top: unset;
     z-index: 99;
-    overflow: auto;
+    ul{
+      overflow: auto;
+      li{
+      }
+    }
   }
+
 }

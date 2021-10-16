@@ -56,19 +56,16 @@ export const fetchButton = (data) => async (dispatch, getState) => {
     await dispatch(fetchMaterial(getState().home.fabric, getState().home.lining, getState().home.button))
 }
 
-export const fetchMaterial = (type,menu, shot, value,icon) => (dispatch, getState) => {
+export const fetchMaterial = (type,menu, shot, value,icon,price) => (dispatch, getState) => {
     let selectedItems = []
 
     if( type === "default"){
         for (let item of getState().home.menu) {
             let data = {};
-
             data["mode"] = item.title
-
             data["id"] = item.default.id
-
             data["icon"] = item.default.icon
-
+            data["price"] = item.default.price
             selectedItems.push(data)
         }
     }
@@ -87,6 +84,11 @@ export const fetchMaterial = (type,menu, shot, value,icon) => (dispatch, getStat
                 icon !== null && item.title === menu
                     ? icon
                     :getState().home.materialSelected.filter(material => material.mode === item.title )[0].icon
+
+            data["price"] =
+                icon !== null && item.title === menu
+                    ? price
+                    :getState().home.materialSelected.filter(material => material.mode === item.title )[0].price
 
             selectedItems.push(data)
         }
@@ -138,3 +140,7 @@ export const changeShot = (data,shot) => (dispatch,getState) => {
         )
 }
 
+export const setFinalPrice = (data) => ({
+    type:HomeActionType.FINAL_PRICE,
+    payload:data
+})

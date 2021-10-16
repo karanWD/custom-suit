@@ -1,4 +1,4 @@
-import React, {Suspense, lazy} from "react"
+import React, {Suspense, lazy, useEffect} from "react"
 import {BrowserRouter as Router} from "react-router-dom";
 import {Switch, Route} from "react-router"
 import {useHistory,useLocation,useRouteMatch,useQuery,useParams} from "react-router-dom"
@@ -8,6 +8,7 @@ import logo from './logo.svg';
 import Loading from "./Components/Loading/Loading";
 import Insert from "./Components/Admin/Insert/Insert";
 import Login from "./Login/Login";
+import {useToken} from "./functions";
 
 const Home = lazy(() => {
     return Promise.all([
@@ -26,9 +27,8 @@ const Admin = lazy(() => {
 })
 
 function App() {
-
+    // const token = useToken(40)
   return (
-
       <Suspense fallback={<Loading/>}>
         <div className="container-fluid px-0">
           <Router basename="/">

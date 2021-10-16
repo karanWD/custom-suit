@@ -74,6 +74,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px 0 0 0;
 }
 .buy-btn button {
   border: none;
@@ -137,7 +138,7 @@ body {
 }
 .inner-list-item ul li {
   margin-bottom: 10px;
-  padding: 5px 15px;
+  padding: 5px 5px;
   background-color: #f3f3f3;
   border: 1px solid #eee;
   border-radius: 15px;
@@ -291,8 +292,13 @@ body {
   }
 
   .innerListItemsContainer {
-    height: 100vh;
+    height: unset;
+    padding: 0;
+    bottom: 0;
+    top: unset;
     z-index: 99;
+  }
+  .innerListItemsContainer ul {
     overflow: auto;
   }
 }

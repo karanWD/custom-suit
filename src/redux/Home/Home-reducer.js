@@ -6,7 +6,7 @@ const INITIAL_STATE = {
     innerListItems:null,
     materialSelected:null,
     material:null,
-
+    finalPrice:0
 }
 
 const homeReducer = (state=INITIAL_STATE,action) => {
@@ -45,6 +45,11 @@ const homeReducer = (state=INITIAL_STATE,action) => {
             return {
                 ...state,
                 materialSelected: action.payload
+            }
+        case HomeActionType.FINAL_PRICE :
+            return {
+                ...state,
+                finalPrice:action.payload
             }
         default : return state
     }
